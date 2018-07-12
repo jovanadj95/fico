@@ -17,7 +17,7 @@ namespace WebProdavnica.Components
         public IViewComponentResult Invoke()
         {
             IEnumerable<string> kategorija = db.Kategorije
-            .Select(k => k.Naziv).Distinct()
+             .Select(k => k.Naziv).Distinct()
             .OrderBy(k => k);
             return View(kategorija);
         }

@@ -5,11 +5,10 @@
 {
 
     <a class="btn btn-block
-        @(kategorija == @ViewBag.KategorijaID  ? "btn-danger": "btn-default")"
+        @(kategorija == @ViewBag.Kategorija  ? "btn-danger": "btn-default")"
        asp-action="Index"
        asp-controller="Home"
        asp-route-kategorija="@kategorija">
-
         @kategorija
     </a>
     

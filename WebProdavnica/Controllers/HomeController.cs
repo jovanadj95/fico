@@ -17,31 +17,25 @@ namespace WebProdavnica.Controllers
         {
             db = _db;
         }
-        public IActionResult Index(string id="")
+        public IActionResult Index(String kategorija="")
         {
-            
-            IEnumerable<Proizvod> listaProizvoda = db.Proizvodi;
-            if (id !="")
+            int a = 0;
+            if(kategorija.Equals("Graficke karte"))
             {
-                Kategorija k1 = db.Kategorije.Find(id);
-
-                if (k1 != null) 
-                {
-                    ViewBag.Kategorija = k1.Naziv;
-                    ViewBag.KategorijaID = k1.KategorijaId;
-                    listaProizvoda = listaProizvoda.Where(p => p.KategorijaId == Int32.Parse(id));
-                   
-                }
-
-                else
-                {
-                    ViewBag.Kategorija = "";
-                    return View();
-                }
-
+                a = 4;
+            }
+            ViewBag.Kategorija = kategorija;
+        
+            IEnumerable<Proizvod> listaProizvoda = db.Proizvodi;
+            IEnumerable<Kategorija> listaKategorija = db.Kategorije;
+            if (kategorija != "")
+            {
+                listaProizvoda = listaProizvoda
+                .Where(p => p.KategorijaId == a);
+              
             }
             return View("Index", listaProizvoda.ToList());
-            
+
         }
 
         public IActionResult About()
