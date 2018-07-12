@@ -1,0 +1,12 @@
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\bin\Debug\netcoreapp2.0\WebProdavnica.deps.json
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\bin\Debug\netcoreapp2.0\WebProdavnica.runtimeconfig.json
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\bin\Debug\netcoreapp2.0\WebProdavnica.runtimeconfig.dev.json
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\bin\Debug\netcoreapp2.0\WebProdavnica.dll
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\bin\Debug\netcoreapp2.0\WebProdavnica.pdb
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.csprojAssemblyReference.cache
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.csproj.CoreCompileInputs.cache
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.AssemblyInfoInputs.cache
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.AssemblyInfo.cs
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.dll
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\WebProdavnica.pdb
+C:\Users\death&night\source\repos\WebProdavnica\WebProdavnica\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

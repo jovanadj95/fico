@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Proizvod>
+@{
+    ViewData["Title"] = "Proizvodi";
+}
+@foreach (Proizvod p in Model)
+{
+    
+        @Html.Partial("_PrikaziProizvod", p)
+    
+
+}

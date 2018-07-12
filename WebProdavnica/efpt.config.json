@@ -1,0 +1,1 @@
+﻿{"ContextClassName":"WebProdavnicaContext","DefaultDacpacSchema":null,"IdReplace":false,"IncludeConnectionString":true,"OutputPath":"Models","ProjectRootNamespace":"WebProdavnica","SelectedToBeGenerated":0,"Tables":["dbo.Kategorija","dbo.Porudzbina","dbo.Proizvod","dbo.Stavka"],"UseDatabaseNames":true,"UseFluentApiOnly":false,"UseHandleBars":false,"UseInflector":false}

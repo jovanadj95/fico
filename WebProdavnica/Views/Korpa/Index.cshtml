@@ -1,0 +1,74 @@
+﻿@model Korpa
+<h2>Vasa korpa</h2>
+<div class="row">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Kolicina</th>
+                <th>Stavka</th>
+                <th class="text-right">Cena</th>
+                <th class="text-right">Vrednost stavke</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (StavkaKorpe stavka in Model.Stavke)
+            {
+                <tr>
+                    <td class="text-center">@stavka.Kolicina</td>
+                    <td class="text-left">@stavka.Proizvod.Naziv</td>
+                    <td class="text-right">@stavka.Proizvod.Cena.ToString()</td>
+                    <td class="text-right">
+                        @((stavka.Kolicina * stavka.Proizvod.Cena).ToString())
+                    </td>
+                    <td>
+                        <form asp-action="ObrisiStavku" method="post">
+                            <input type="hidden" name="ProizvodId" value="@stavka.Proizvod.ProizvodId" />                                
+                            <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />                                 
+                            <button type="submit" class="btn btn-sm btn-danger"> Ukloni</button>                             
+                            
+                        </form>
+                    </td>
+                    <td>
+
+                        <form asp-action="PromeniStavku" method="post">
+
+                            <input type="hidden" name="ProizvodId" value="@stavka.Proizvod.ProizvodId" />                                 
+                            <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl" />                                  
+                            <div class="input-group">
+                                <input type="number" name="kolicina" value="@stavka.Kolicina" class="form-control" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">Promeni</button>
+                                </span>
+                            </div>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Ukupno:</td>
+                <td class="text-right">
+                    @Model.VrednostKorpe().ToString()
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@ViewBag.ReturnUrl">Nastavi kupovinu</a>
+</div>
+
+<hr />
+<div class="row">
+    <form asp-action="Index" asp-controller="Kupovina">
+        <button class="btn btn-primary btn-block">Kupi</button>
+    </form>
+</div>
+
+
+
+

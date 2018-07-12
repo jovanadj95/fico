@@ -1,0 +1,23 @@
+﻿@model Proizvod
+
+<div class="well">
+  
+    <h3>
+        <strong>@Model.Naziv</strong>
+        <span class="pull-right label label-primary">
+            @Model.Cena.ToString()
+        </span>
+    </h3>
+    <form id="@Model.ProizvodId" asp-action="DodajStavku" asp-controller="Korpa"
+          method="post">
+        <input type="hidden" asp-for="ProizvodId" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PutanjaQueryString()" />
+        <span class="lead">
+            @Model.Opis
+            <button type="submit" class="btn btn-success btn-sm pull-right">
+                Dodaj u korpu
+            </button>
+        </span>
+    </form>
+   
+</div>
