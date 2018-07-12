@@ -19,23 +19,24 @@ namespace WebProdavnica.Controllers
         }
         public IActionResult Index(String kategorija="")
         {
-            int a = 0;
-            if(kategorija.Equals("Graficke karte"))
-            {
-                a = 4;
-            }
             ViewBag.Kategorija = kategorija;
         
             IEnumerable<Proizvod> listaProizvoda = db.Proizvodi;
-            IEnumerable<Kategorija> listaKategorija = db.Kategorije;
             if (kategorija != "")
             {
                 listaProizvoda = listaProizvoda
-                .Where(p => p.KategorijaId == a);
+                .Where(p => p.KategorijaId == getNaziv(kategorija));
               
             }
             return View("Index", listaProizvoda.ToList());
 
+        }
+
+        private int getNaziv(string kategorija)
+        {
+            IEnumerable<Kategorija> listaKategorija = db.Kategorije;
+            listaKategorija=listaKategorija.Where(k => k.Naziv.Equals(kategorija));
+            return listaKategorija.ElementAt(0).KategorijaId;
         }
 
         public IActionResult About()
