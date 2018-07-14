@@ -25,17 +25,18 @@ namespace WebProdavnica.Controllers
             if (kategorija != "")
             {
                 listaProizvoda = listaProizvoda
-                .Where(p => p.KategorijaId == getNaziv(kategorija));
+                    .Where(p => p.KategorijaId == NadjiKategoriju(kategorija));
               
             }
             return View("Index", listaProizvoda.ToList());
 
         }
 
-        private int getNaziv(string kategorija)
+        private int NadjiKategoriju(string kategorija)
         {
             IEnumerable<Kategorija> listaKategorija = db.Kategorije;
-            listaKategorija=listaKategorija.Where(k => k.Naziv.Equals(kategorija));
+            listaKategorija = listaKategorija
+                .Where(k => k.Naziv.Equals(kategorija));
             return listaKategorija.ElementAt(0).KategorijaId;
         }
 
