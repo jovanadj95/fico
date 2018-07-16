@@ -21,3 +21,28 @@
     </a>
 
 }
+
+<div class="card p-1">
+    <form asp-action="Index" data-ajax="true" data-ajax-update="#div1" >
+        <div class="form-group">
+            <labelfor="ime">Unesite minimalnu cenu</label>
+            <input type="text" data-val="true" data-val-number="Unesite broj"
+                   name="min" id="min" class="form-control" />
+            <span class="text-danger" data-valmsg-for="min" data-valmsg
+                  replace="true"></span>
+        </div>
+        <div class="form-group">
+            <label for="ime">Unesite maksimalnu cenu</label>
+            <input type="text" data-val="true" data-val-number="Unesite broj"
+                   name="max" id="max" class="form-control" /> <br />
+            <span class="text-danger" data-valmsg-for="max" data-valmsg
+                  replace="true"></span>
+        </div>
+        <input type="submit" value="Pronadji" class="btn btn-block btn-primary" />
+    </form>
+</div>
+
+
+@section Scripts{
+    <script src="~/node_modules/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
+}

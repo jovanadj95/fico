@@ -14,6 +14,9 @@
     <Content Include="wwwroot\node_modules\bootstrap\dist\css\bootstrap.css" />
     <Content Include="wwwroot\node_modules\bootstrap\dist\css\bootstrap.min.css" />
     <Content Include="wwwroot\node_modules\bootstrap\package.json" />
+    <Content Include="wwwroot\node_modules\jquery-ajax-unobtrusive\bower.json" />
+    <Content Include="wwwroot\node_modules\jquery-ajax-unobtrusive\LICENSE.txt" />
+    <Content Include="wwwroot\node_modules\jquery-ajax-unobtrusive\package.json" />
     <Content Include="wwwroot\node_modules\jquery\AUTHORS.txt" />
     <Content Include="wwwroot\node_modules\jquery\bower.json" />
     <Content Include="wwwroot\node_modules\jquery\external\sizzle\LICENSE.txt" />
@@ -174,6 +177,12 @@
     <None Include="wwwroot\node_modules\bootstrap\scss\_type.scss" />
     <None Include="wwwroot\node_modules\bootstrap\scss\_utilities.scss" />
     <None Include="wwwroot\node_modules\bootstrap\scss\_variables.scss" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\.npmignore" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\CONTRIBUTING.md" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\gulpfile.js" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.min.js" />
+    <None Include="wwwroot\node_modules\jquery-ajax-unobtrusive\README.md" />
     <None Include="wwwroot\node_modules\jquery\dist\core.js" />
     <None Include="wwwroot\node_modules\jquery\dist\jquery.js" />
     <None Include="wwwroot\node_modules\jquery\dist\jquery.min.js" />

@@ -17,7 +17,7 @@ namespace WebProdavnica.Controllers
         {
             db = _db;
         }
-        public IActionResult Index(String kategorija="")
+        public IActionResult Index(decimal? min, decimal? max, String kategorija ="")
         {
             ViewBag.Kategorija = kategorija;
         
@@ -28,8 +28,21 @@ namespace WebProdavnica.Controllers
                     .Where(p => p.KategorijaId == NadjiKategoriju(kategorija));
               
             }
-            return View("Index", listaProizvoda.ToList());
 
+            if (min == null)
+            {
+                min = listaProizvoda.Min(p => p.Cena);
+            }
+
+            if (max == null)
+            {
+                max = listaProizvoda.Max(p => p.Cena);
+            }
+
+            listaProizvoda = listaProizvoda
+                    .Where(p => p.Cena >= min && p.Cena <= max)
+                    .OrderBy(p => p.Cena);
+            return View("Index", listaProizvoda.ToList());
         }
 
         private int NadjiKategoriju(string kategorija)
