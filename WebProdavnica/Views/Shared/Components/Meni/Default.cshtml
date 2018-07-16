@@ -2,7 +2,7 @@
 @model IEnumerable<string>
 
 <a class="btn btn-block mt-1
-@(ViewBag.Kategorija== "" ? "btn-danger": "btn-dark")"
+@(ViewBag.Kategorija== "" ? "btn-primary": "btn-dark")"
    asp-action="Index"
    asp-controller="Home"
    asp-route-kategorija="">
@@ -11,9 +11,8 @@
 
 @foreach (string kategorija in Model)
 {
-
     <a class="btn btn-block mt-1
-        @(kategorija == @ViewBag.Kategorija  ? "btn-danger": "btn-dark")"
+        @(kategorija == @ViewBag.Kategorija  ? "btn-primary": "btn-dark")"
        asp-action="Index"
        asp-controller="Home"
        asp-route-kategorija="@kategorija">
@@ -23,9 +22,9 @@
 }
 
 <div class="card p-1">
-    <form asp-action="Index" data-ajax="true" data-ajax-update="#div1" >
+    <form asp-action="Index" data-ajax="true" data-ajax-update="#div1">
         <div class="form-group">
-            <labelfor="ime">Unesite minimalnu cenu</label>
+            <label for="ime">Unesite minimalnu cenu</label>
             <input type="text" data-val="true" data-val-number="Unesite broj"
                    name="min" id="min" class="form-control" />
             <span class="text-danger" data-valmsg-for="min" data-valmsg
@@ -41,7 +40,6 @@
         <input type="submit" value="Pronadji" class="btn btn-block btn-primary" />
     </form>
 </div>
-
 
 @section Scripts{
     <script src="~/node_modules/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.min.js"></script>
