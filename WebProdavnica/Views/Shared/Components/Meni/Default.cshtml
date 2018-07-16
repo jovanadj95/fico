@@ -1,23 +1,23 @@
 ﻿
 @model IEnumerable<string>
 
+<a class="btn btn-block mt-1
+@(ViewBag.Kategorija== "" ? "btn-danger": "btn-dark")"
+   asp-action="Index"
+   asp-controller="Home"
+   asp-route-kategorija="">
+    Svi proizvodi
+</a>
+
 @foreach (string kategorija in Model)
 {
 
-    <a class="btn btn-block
-        @(kategorija == @ViewBag.Kategorija  ? "btn-danger": "btn-default")"
+    <a class="btn btn-block mt-1
+        @(kategorija == @ViewBag.Kategorija  ? "btn-danger": "btn-dark")"
        asp-action="Index"
        asp-controller="Home"
        asp-route-kategorija="@kategorija">
         @kategorija
     </a>
-    
-}
 
-    <a class="btn btn-block
-@(ViewBag.Kategorija== "" ? "btn-danger": "btn-default")"
-       asp-action="Index"
-       asp-controller="Home"
-       asp-route-kategorija="">
-        Svi proizvodi
-    </a>
+}

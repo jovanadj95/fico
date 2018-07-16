@@ -1,6 +1,6 @@
 ﻿@model Proizvod
 
-<div class="card bg-dark text-white mt-1">
+<div class="card bg-dark text-white mt-1 pl-1">
   
     <h3>
         <strong>@Model.Naziv</strong>
@@ -12,7 +12,7 @@
           method="post">
         <input type="hidden" asp-for="ProizvodId" />
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PutanjaQueryString()" />
-        <span class="lead">
+        <span class="card-body p-0">
             @Model.Opis
             <button type="submit" class="btn btn-success btn-sm float-right">
                 Dodaj u korpu
