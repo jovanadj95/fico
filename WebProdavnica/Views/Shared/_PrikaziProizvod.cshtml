@@ -1,10 +1,10 @@
 ﻿@model Proizvod
 
-<div class="well">
+<div class="card bg-dark text-white mt-1">
   
     <h3>
         <strong>@Model.Naziv</strong>
-        <span class="pull-right label label-primary">
+        <span class="float-right badge-primary">
             @Model.Cena.ToString()
         </span>
     </h3>
@@ -14,7 +14,7 @@
         <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PutanjaQueryString()" />
         <span class="lead">
             @Model.Opis
-            <button type="submit" class="btn btn-success btn-sm pull-right">
+            <button type="submit" class="btn btn-success btn-sm float-right">
                 Dodaj u korpu
             </button>
         </span>
