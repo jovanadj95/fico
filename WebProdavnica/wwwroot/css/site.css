@@ -1,6 +1,11 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0 !important;
     padding-bottom: 20px;
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Wrapping element */

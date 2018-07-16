@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "f3e5323d5b8c9388203abf85d4bd48fdd2e24c73"
+    "signature": "c10ec4edf0a49e46b75fa2fb08e8a86e522d7cb3"
   },
   "compilationOptions": {
     "defines": [
@@ -28,7 +28,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.4",
-          "bootstrap": "4.0.0"
+          "bootstrap": "4.1.1"
         },
         "runtime": {
           "WebProdavnica.dll": {}
@@ -37,10 +37,10 @@
           "WebProdavnica.dll": {}
         }
       },
-      "bootstrap/4.0.0": {
+      "bootstrap/4.1.1": {
         "dependencies": {
           "jQuery": "3.0.0",
-          "popper.js": "1.12.9"
+          "popper.js": "1.14.0"
         }
       },
       "jQuery/3.0.0": {},
@@ -2526,7 +2526,7 @@
           "lib/netstandard1.3/NuGet.Frameworks.dll": {}
         }
       },
-      "popper.js/1.12.9": {},
+      "popper.js/1.14.0": {},
       "Remotion.Linq/2.2.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -4290,12 +4290,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "bootstrap/4.0.0": {
+    "bootstrap/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aW3kJMmptC2GD4+hIa3x3fSrPF4VkrWQ2PRBEJg+o7lMRMi7u4UW9igY/GP02/wrIpH/CusL+mQIM42YhvA3XQ==",
-      "path": "bootstrap/4.0.0",
-      "hashPath": "bootstrap.4.0.0.nupkg.sha512"
+      "sha512": "sha512-GAW8nugGorUxJRAIYrJ69tantpLlosqABI2cen74ipe3XbllvV2efdskNLXlt9vpsKL6JZjopLN56ib7R2cmJA==",
+      "path": "bootstrap/4.1.1",
+      "hashPath": "bootstrap.4.1.1.nupkg.sha512"
     },
     "jQuery/3.0.0": {
       "type": "package",
@@ -5543,12 +5543,12 @@
       "path": "nuget.frameworks/4.0.0",
       "hashPath": "nuget.frameworks.4.0.0.nupkg.sha512"
     },
-    "popper.js/1.12.9": {
+    "popper.js/1.14.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WfoI8YXFx31zr8w6AvYMmqKihR3a/wLc5wBhu41ApgBukTM8C2UHNSRFrO6485SDQ/HKoSn9yiEMgfBx1LVNNw==",
-      "path": "popper.js/1.12.9",
-      "hashPath": "popper.js.1.12.9.nupkg.sha512"
+      "sha512": "sha512-SPxZdXknelgQ015wey7GMZvsVdt/SyEmHYORhEp5k/uF9MUk9DPtkn+6dR98fud2hVWJjZm9KKr474+r7WQt+A==",
+      "path": "popper.js/1.14.0",
+      "hashPath": "popper.js.1.14.0.nupkg.sha512"
     },
     "Remotion.Linq/2.2.0": {
       "type": "package",
