@@ -1,4 +1,4 @@
-1. KORAK - Kreiranje tabela
+1. KORAK - Kreiranje baze WebProdavnicaDb i tabela
 CREATE TABLE Kategorija(
  KategorijaId int IDENTITY(1,1) NOT NULL PRIMARY KEY,
  Naziv nvarchar(100) NULL
@@ -27,13 +27,7 @@ CREATE TABLE Stavka(
 2. KORAK - Migracija, kreiranje AspNetUsers preko Package Manager Console
 Update-Database -Context ApplicationDbContext
 
-3. KORAK - Pokretanje aplikacije i registracija da se napravi korisnik (AspNetUsers)
-
-4. KORAK - Alter tabele Porudzbina da se doda KupacId (AspNetUsers Id)
-ALTER TABLE dbo.Porudzbina
-	ADD KupacId nvarchar(450) NOT NULL FOREIGN KEY REFERENCES dbo.AspNetUsers(Id);
-
-5. KORAK - INSERT
+3. KORAK - Insert proizvoda i kategorija
 INSERT Kategorija (Naziv) VALUES ('Procesori')
 INSERT Kategorija (Naziv) VALUES ('Maticne ploce')
 INSERT Kategorija (Naziv) VALUES ('Memorije')
@@ -51,11 +45,19 @@ INSERT INTO Proizvod (Cena, KategorijaId, Naziv, Opis) VALUES (CAST(14999.00 AS 
 INSERT INTO Proizvod (Cena, KategorijaId, Naziv, Opis) VALUES (CAST(34275.00 AS Decimal(10,2)), 4, 'ASUS nVidia GeForce GTX 1050Ti Phoenix','4GB GDDR5 128bit - PH-GTX1050TI-4G PCI Express 3.0, Nvidia')
 INSERT INTO Proizvod (Cena, KategorijaId, Naziv, Opis) VALUES (CAST(23348.95 AS Decimal(10,2)), 4, 'ASUS GeForce GTX 1050 Ti Cerberus', 'OC 4GB GDDR5 128bit - CERBERUS-GTX1050TI-O4G, PCI Express 3.0')
 
-INSERT INTO Porudzbina(KupacId) VALUES('b6e61024-e889-4315-89ba-9dbe1f05d098');
-INSERT INTO Porudzbina(KupacId) VALUES('b6e61024-e889-4315-89ba-9dbe1f05d098');
-INSERT INTO Porudzbina(KupacId) VALUES('b6e61024-e889-4315-89ba-9dbe1f05d098');
+4. KORAK - Pokretanje aplikacije i registracija da se napravi korisnik (AspNetUsers)
 
-INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES ( 2, 1, 1)
-INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES ( 1, 1, 2)
-INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES ( 1, 2, 2)
+5. KORAK - Alter tabele Porudzbina da se doda KupacId (AspNetUsers Id)
+ALTER TABLE dbo.Porudzbina
+	ADD KupacId nvarchar(450) NOT NULL FOREIGN KEY REFERENCES dbo.AspNetUsers(Id);
+
+6. KORAK - INSERT porudzbina i stavki
+
+INSERT INTO Porudzbina(KupacId) VALUES('c16920f3-cef6-458d-a7c1-94335d94219f');
+INSERT INTO Porudzbina(KupacId) VALUES('c16920f3-cef6-458d-a7c1-94335d94219f');
+INSERT INTO Porudzbina(KupacId) VALUES('c16920f3-cef6-458d-a7c1-94335d94219f');
+
+INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES (2, 1, 1)
+INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES (1, 1, 2)
+INSERT Stavka (PorudzbinaId, ProizvodId, Kolicina) VALUES (1, 2, 2)
 

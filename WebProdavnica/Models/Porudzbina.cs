@@ -16,6 +16,7 @@ namespace WebProdavnica.Models
         public int PorudzbinaId { get; set; }
         [Column(TypeName = "datetime")]
         public DateTime DatumKupovine { get; set; }
+        public string KupacId { get; set; }
 
         [InverseProperty("Porudzbina")]
         public ICollection<Stavka> Stavke { get; set; }

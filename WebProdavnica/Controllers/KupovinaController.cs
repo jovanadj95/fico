@@ -39,7 +39,7 @@ namespace WebProdavnica.Controllers
             ApplicationUser user = await um.GetUserAsync(User);
             string id = user.Id;
             Porudzbina p1 = new Porudzbina {
-                 
+                KupacId = id,
                 DatumKupovine = DateTime.Now
             };
             try
