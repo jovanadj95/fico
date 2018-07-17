@@ -1,0 +1,10 @@
+﻿@inject UserManager<ApplicationUser> um
+@{
+    ViewData["Title"] = "Administracija";
+
+    var korisnik = await um.GetUserAsync(User);
+}
+
+<h2>Vi ste administrator</h2>
+
+

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebProdavnica.Models;
+using Microsoft.AspNetCore.Authorization;
 
 
 
@@ -46,6 +47,12 @@ namespace WebProdavnica.Controllers
                     .Where(p => p.Cena >= min && p.Cena <= max)
                     .OrderBy(p => p.Cena);
             return View("Index", listaProizvoda.ToList());
+        }
+
+        [Authorize(Policy = "SamoAdmin")]
+        public IActionResult Administracija()
+        {
+            return View();
         }
 
         private int NadjiKategoriju(string kategorija)

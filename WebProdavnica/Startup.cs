@@ -51,6 +51,9 @@ namespace WebProdavnica
             services.AddScoped<KorpaServis>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
+            services.AddAuthorization(opcije => {
+                opcije.AddPolicy("SamoAdmin", polisa => polisa.RequireUserName("admin@gmail.com"));
+            });
             services.AddDbContext<WebProdavnicaContext>(opcije => opcije.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
